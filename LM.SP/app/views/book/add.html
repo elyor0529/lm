@@ -1,0 +1,147 @@
+﻿
+<form class="form-horizontal" role="form" novalidate="novalidate" ng-submit="add()" disable-auto-validate="true" validate-on-form-submit="true">
+
+    <table style="width:100%">
+
+        <tbody data-ng-repeat="author in bookData.authors">
+            <tr>
+                <td>
+                    <h3>
+                        <small>Author {{$index+1}}</small>
+                        <a class="btn btn-xs btn-default" ng-click="removeAuthor($index)">
+                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </a>
+                    </h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="row">
+
+                        <div class="col-xs-3">
+                            <div class="form-group">
+                                <label for="firstName{{$index+1}}" class="control-label">First Name</label>
+                                <input id="firstName{{$index+1}}" name="firstName{{$index+1}}" type="text" class="form-control  input-sm" data-ng-model="author.firstName" placeholder="First Name" required />
+                            </div>
+                        </div>
+
+                        <div class="col-xs-3">
+                            <div class="form-group">
+                                <label for="lastName{{$index+1}}" class="control-label">Last Name</label>
+                                <input id="lastName{{$index+1}}" name="lastName{{$index+1}}" type="text" class="form-control  input-sm" data-ng-model="author.lastName" placeholder="Last Name" required />
+                            </div>
+                        </div>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <p style="padding-top:10px">
+        <button class="btn btn-sm btn-success" ng-click="addAuthor()">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            Add Author
+        </button>
+    </p>
+
+    <div class="page-header">
+        <h4>Book Details</h4>
+    </div>
+
+    <table style="width:100%">
+        <tr>
+            <td>
+                <div class="row">
+
+                    <div class="col-xs-3">
+                        <div class="form-group">
+                            <label for="title" class="control-label">Title</label>
+                            <input id="title" name="title" type="text" class="form-control  input-sm" data-ng-model="bookData.title" placeholder="Title" required />
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                        <div class="form-group">
+                            <label for="pages" class="control-label">Pages</label>
+                            <input id="pages" name="pages" type="number" class="form-control  input-sm" data-ng-model="bookData.countOfPage" placeholder="Pages" required />
+                        </div>
+                    </div>
+
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="row">
+
+                    <div class="col-xs-3">
+                        <div class="form-group">
+                            <label for="year" class="control-label">Year</label>
+                            <input id="year" name="year" type="number" class="form-control  input-sm" data-ng-model="bookData.year" placeholder="Year" required />
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                        <div class="form-group">
+                            <label for="isbn" class="control-label">Isbn</label>
+                            <input id="isbn" name="isbn" type="text" class="form-control  input-sm" data-ng-model="bookData.iSBN" placeholder="ISBN" required />
+                        </div>
+                    </div>
+
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label for="publisher" class="control-label">Publisher</label>
+                            <textarea id="publisher" name="publisher" type="text" class="form-control  input-sm" data-ng-model="bookData.publisher" placeholder="Publisher" required></textarea>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div class="page-header">
+        <h4>Picture</h4>
+    </div>
+    <div class="form-group">
+        <table>
+            <tr>
+                <td>
+                    <span class="btn btn-default btn-file">
+                        <i class="fa fa-paperclip"></i> Browse
+                        <input type="file" ngf-select="selectFile($file)" />
+                    </span>
+                </td>
+                <td>
+                    <div ng-show="files.length>0">
+                        <div style="display:inline-block;">
+                            <span class="fa fa-file" aria-hidden="true"></span>
+                            {{files[0].name}}
+                        </div>
+                        <div style="display:inline-block;">
+                            <a class="btn btn-sm btn-default" ng-click="removeFile()">
+                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="page-header small">
+    </div>
+
+    <div style="text-align:center">
+        <input type="submit" class="btn btn-primary" value="Save" />
+        <a href="#/book/list" class="btn btn-warning">Cancel</a>
+    </div>
+
+</form>

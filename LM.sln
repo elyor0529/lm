@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LM.SP", "LM.SP\", "{90964E53-0BBC-4A76-8702-1A9BC26CD517}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_65224"
+		Debug.AspNetCompiler.PhysicalPath = "LM.SP\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_65224\"
+		Debug.AspNetCompiler.Updateable = "false"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_65224"
+		Release.AspNetCompiler.PhysicalPath = "LM.SP\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_65224\"
+		Release.AspNetCompiler.Updateable = "false"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "65224"
+		SlnRelativePath = "LM.SP\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LM.Api", "LM.Api\LM.Api.csproj", "{6C8B76DC-953B-4C79-9150-1FFA21B28193}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3DD22074-83A5-49D5-8915-56B7F5BE6F32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ui", "ui", "{631C55EF-C37A-4A4B-8A03-F08CB5C762B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{EA3409FB-E710-4E43-AB40-063E7E0EED77}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		docs\Тестовое задание.docx = docs\Тестовое задание.docx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90964E53-0BBC-4A76-8702-1A9BC26CD517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90964E53-0BBC-4A76-8702-1A9BC26CD517}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90964E53-0BBC-4A76-8702-1A9BC26CD517}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{90964E53-0BBC-4A76-8702-1A9BC26CD517}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{6C8B76DC-953B-4C79-9150-1FFA21B28193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C8B76DC-953B-4C79-9150-1FFA21B28193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C8B76DC-953B-4C79-9150-1FFA21B28193}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C8B76DC-953B-4C79-9150-1FFA21B28193}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{90964E53-0BBC-4A76-8702-1A9BC26CD517} = {631C55EF-C37A-4A4B-8A03-F08CB5C762B6}
+		{6C8B76DC-953B-4C79-9150-1FFA21B28193} = {3DD22074-83A5-49D5-8915-56B7F5BE6F32}
+	EndGlobalSection
+EndGlobal
